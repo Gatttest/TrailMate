@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.gatt.trailmap" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Flashlight">
+        <param name="android-package" value="nl.xservices.plugins.Flashlight" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="BackgroundGeolocation">
+        <param name="android-package" value="com.tenforwardconsulting.cordova.BackgroundGeolocationPlugin" />
+    </feature>
+    <feature name="Pedometer">
+        <param name="android-package" value="org.apache.cordova.pedometer.PedoListener" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
+    <feature name="Sms">
+        <param name="android-package" value="com.cordova.plugins.sms.Sms" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="PushNotification">
+        <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
+    </feature>
+    <name>TrailMate</name>
+    <description>
+        An application that responds to the track the trail.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        GATT Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <splash src="res/splash.png" />
+    <icon src="res/icon.png" />
+    <icon density="ldpi" src="res/icons/android/ldpi.png" />
+    <icon density="mdpi" src="res/icons/android/mdpi.png" />
+    <icon density="hdpi" src="res/icons/android/hdpi.png" />
+    <icon density="xhdpi" src="res/icons/android/xhdpi.png" />
+    <icon density="xxhdpi" src="res/icons/android/xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png" />
+    <splash density="land-ldpi" src="res/screens/android/drawable-land-ldpi-screen.png" />
+    <splash density="land-mdpi" src="res/screens/android/drawable-land-mdpi-screen.png" />
+    <splash density="land-hdpi" src="res/screens/android/drawable-land-hdpi-screen.png" />
+    <splash density="land-xhdpi" src="res/screens/android/drawable-land-xhdpi-screen.png" />
+    <splash density="land-xxhdpi" src="res/screens/android/drawable-land-xxhdpi-screen.png" />
+    <splash density="land-xxxhdpi" src="res/screens/android/drawable-land-xxxhdpi-screen.png" />
+    <splash density="port-ldpi" src="res/screens/android/drawable-port-ldpi-screen.png" />
+    <splash density="port-mdpi" src="res/screens/android/drawable-port-mdpi-screen.png" />
+    <splash density="port-hdpi" src="res/screens/android/drawable-port-hdpi-screen.png" />
+    <splash density="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
+    <splash density="port-xxhdpi" src="res/screens/android/drawable-port-xxhdpi-screen.png" />
+    <splash density="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
+    <preference name="loglevel" value="DEBUG" />
+</widget>

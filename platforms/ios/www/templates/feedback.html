@@ -1,0 +1,59 @@
+<ion-view title="Feedback">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+         <ion-nav-buttons side="left" >
+                     <button ng-click="goPrevious()" class="button-icon button-white back-button icon ion-ios7-arrow-back">
+        
+      </button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="has-header" padding="true">
+
+
+  
+<form class="list" name="feedbackForm">
+
+
+   <div style="height: 100px;" class="spacer"></div>
+           
+        
+            <div class="app-icon"></div> 
+  <div style="height: 20px;" class="spacer"></div>
+
+  <p>Please feel free to share your experiences and leave your valuable feedback regarding this years TrailWalk.</p>
+
+<div class="list">
+  <label class="item item-input">
+    <textarea ng-model="user.feedback" rows="7" placeholder="Type your feedback here" required></textarea>
+  </label>
+
+  
+ 
+</div>
+
+
+
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Please give a rating for your  experience
+    </div>
+    <select ng-model="user.rating">
+      <option value="1">1</option>
+      <option selected value="2">2</option>
+      <option value="2">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </label>
+
+</div>
+
+            
+            
+
+             <button ng-click="sendfeedback(feedbackForm, user)" class="button button-assertive  button-block  icon-left ion-ios-unlocked-outline ">SEND</button>
+           
+        </form>
+  </ion-content>
+</ion-view>

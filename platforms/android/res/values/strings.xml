@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">TrailMate</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="account_name">@string/app_name</string>
+    <string name="account_type">com.gatt.trailmap.account</string>
+    <string name="content_authority">com.gatt.trailmap</string>
+    <string name="google_app_id" translatable="false">85075801930</string>
+</resources>

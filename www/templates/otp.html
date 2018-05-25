@@ -1,0 +1,37 @@
+<ion-view title="Login">
+
+  <ion-content class="no-header" padding="true">
+   
+
+<form class="list" name="otpForm">
+
+
+   <div style="height: 100px;" class="spacer"></div>
+           
+        
+            <div class="app-icon"></div> 
+  <div style="height: 100px;" class="spacer"></div>
+
+<div class="list">
+  <label class="item item-input">
+    <input type="text" ng-model="user.otp" placeholder="Enter OTP" required>
+  </label>
+
+  
+ 
+</div>
+
+
+            
+            
+
+             <button ng-click="verifyotp(otpForm)" class="button button-assertive  button-block  icon-left ion-ios-unlocked-outline ">VERIFY OTP</button>
+            
+             <!-- <button ui-sref="main.signup" class="button button-positive  button-block  icon-left ion-ios-person ">REGISTER NEW USER</button>
+              
+            <button class="button button-positive button-clear button-block" ui-sref="main.forget">forgot my password</button> -->
+        </form>
+
+
+  </ion-content>
+</ion-view>

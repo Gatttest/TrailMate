@@ -1,0 +1,40 @@
+<ion-view title="Weather">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+    <ion-nav-buttons side="left" >
+                     <button ng-click="goPrevious()" class="button-icon button-white back-button icon ion-ios7-arrow-back">
+        
+      </button>
+    </ion-nav-buttons>
+      
+    </ion-nav-bar>
+  <ion-content class="has-header weather-back" padding="true">
+
+<div class="list card">
+      <div class="item item-divider"><h1>City: {{weather.name}}</h1></div>
+      <div class="item item-thumbnail-left">
+        <img src="{{getIconUrl(weather.weather[0].icon)}}" />
+        <h1>{{weather.weather[0].main}}</h1>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-thermometer"></i>
+        <h2>Current Temperature: {{weather.main.temp-273 | number : 2}}&deg;</h2>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-thermometer"></i>
+        <h2>Today's High: {{weather.main.temp_max-273 | number : 2}}&deg;</h2>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-thermometer"></i>
+        <h2>Today's Low: {{weather.main.temp_min-273 | number : 2}}&deg;</h2>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-waterdrop"></i>
+        <h2>Humidity: {{weather.main.humidity}}%</h2>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-shuffle"></i>
+        <h2>Wind: {{ weather.wind.speed*1.60934 | number : 2 }}kmh, {{getDirection(weather.wind.deg)}}</h2>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

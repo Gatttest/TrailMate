@@ -1,0 +1,13 @@
+{
+    "libz.tbd": 2,
+    "CoreLocation.framework": 2,
+    "SystemConfiguration.framework": 1,
+    "AudioToolbox.framework": 1,
+    "AVFoundation.framework": 1,
+    "libsqlite3.dylib": 1,
+    "CoreMotion.framework": 1,
+    "Social.framework": 1,
+    "MessageUI.framework": 2,
+    "AddressBook.framework": 1,
+    "libsqlite3.tbd": 1
+}

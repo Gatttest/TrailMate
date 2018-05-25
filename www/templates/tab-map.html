@@ -1,0 +1,43 @@
+<ion-view title="TrailMap">
+
+
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+     <ion-nav-buttons side="left" >
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left" >
+                    </button>
+                </ion-nav-buttons>
+
+
+                 <ion-nav-buttons side="right">
+          <button class="button-icon icon button-white " ng-click="getSOS()">
+            <i  class="icon ion-sos"></i>
+          </button>
+          <button class="button-icon icon button-white "  ng-click="toggleFlash()" >
+            
+            <i  class="icon" ng-class="{'ion-flash': displayFlash, 'ion-flash-on': !displayFlash}"></i>
+          </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+
+  <ion-content scroll="false" padding="false" data-tap-disabled="true" has-header="true">
+    <leaflet center="center" defaults="defaults" tiles="tiles" geojson="geojson" markers="markers" event-broadcast="events"></leaflet>
+    <div class="map-controls">
+        <button id="locate-button" class="button map-button" ng-click="markLocation()"><i id="locate-icon" class="icon ion-android-locate"></i></button>
+        <button id="hide-markers" class="button map-button" ng-click="toggleMarkers()"><i id="hide-icon" class="icon " ng-class="{'ion-eye-disabled': displayMarkers, 'ion-eye': !displayMarkers}"></i></button>
+
+         <button id="locate-button" class="button map-button" ng-click="shareFacebook()"><i id="locate-icon" class="icon  ion-android-share"></i></button>
+
+
+       <!--  <button id="hide-markers" class="button map-button" style="width:120px;"><small style="font-size: 11px;">remaining 23 KM</small></button> -->
+    </div>
+  </ion-content>
+  <!-- <ion-footer-bar class="bar-assertive">
+      <div class="row">
+        
+        <div class="col col-50">Step Counter: {{numberOfSteps}}</div>
+        <div class="col col-50">Distance: {{distancepedo}}</div>
+        
+      </div>
+    </ion-footer-bar> -->
+</ion-view>

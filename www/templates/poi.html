@@ -1,0 +1,22 @@
+<ion-view title="Check Points">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+      
+    <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+            Back
+        </ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="point in points " ng-hide="(point.secret && !bro)" type="item-text-wrap" ui-sref="tab.poi-detail({poi:$index})">
+      <div class="trail-list-name">
+        <i ng-if="point.type == 'poi'" class="icon ion-flag"></i>
+        <i ng-if="point.type == 'shop'" class="icon ion-settings"></i>
+        <i ng-if="point.type == 'beer'" class="icon ion-beer"></i>
+        <i ng-if="point.type == 'pump'" class="icon ion-happy"></i>
+        <span ng-show="point.name!='CHECKPOINT 0'">{{point.name}}</span>
+        <span ng-show="point.name=='CHECKPOINT 0'">START POINT</span>
+      </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

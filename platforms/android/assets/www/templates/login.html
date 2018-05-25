@@ -1,0 +1,42 @@
+<ion-view title="Login">
+
+  <ion-content class="no-header" padding="true">
+   
+
+<form class="list" name="loginForm">
+
+
+   <div style="height: 100px;" class="spacer"></div>
+           
+        
+            <div class="app-icon"></div> 
+  <div style="height: 100px;" class="spacer"></div>
+
+<div class="list">
+  <label class="item item-input">
+    <input type="text" ng-model="user.teamid" placeholder="Team ID" required>
+  </label>
+
+  
+ 
+</div>
+
+<div class="list">
+  <label class="item item-input">
+    <input type="password" ng-model="user.mobile" placeholder="Password" required>
+  </label>
+
+</div>
+            
+            
+
+             <button ng-click="login(loginForm)" class="button button-assertive  button-block  icon-left ion-ios-unlocked-outline ">LOGIN NOW</button>
+            
+             <!-- <button ui-sref="main.signup" class="button button-positive  button-block  icon-left ion-ios-person ">REGISTER NEW USER</button>
+              
+            <button class="button button-positive button-clear button-block" ui-sref="main.forget">forgot my password</button> -->
+        </form>
+
+
+  </ion-content>
+</ion-view>

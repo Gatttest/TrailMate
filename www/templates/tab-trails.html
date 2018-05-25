@@ -1,0 +1,18 @@
+<ion-view title="Trails">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+       <ion-nav-buttons side="left" >
+                     <button ng-click="goPrevious()" class="button-icon button-white back-button icon ion-ios7-arrow-back">
+        
+      </button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="has-header">
+    <ion-item ui-sref="tab.poi"><span id="poi-link">Points of interest <i class="icon ion-chevron-right"></i></span></ion-item>
+    <ion-list>
+      <ion-item ng-repeat="trail in trails | orderBy: name" ng-hide="(trail.hide || trail.secret && !bro)" type="item-text-wrap" ui-sref="tab.trail-detail({trail:$index})">
+      <div class="rating {{trail.rating | rating}}" style="width: 20px; height: 20px;"></div>
+      <div class="trail-list-name"> {{trail.name | capitalize}} </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

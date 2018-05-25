@@ -1,0 +1,38 @@
+<ion-view title="{{trail.name}}">
+  <ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+      <ion-nav-buttons side="left" >
+                     <button ng-click="goPrevious()" class="button-icon button-white back-button icon ion-ios7-arrow-back">
+        
+      </button>
+    </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+          <button class="button-icon button-white icon ion-pinpoint" ng-click="goToTrail(trail)"></button>
+      </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content has-header="true" padding="true">
+    <div class="row">
+      <div class="col">
+        <h3 ng-if="trail.rating=='3'">Bengaluru Trailwalker</h3>
+      </div>
+      <!-- <div class="col">
+        <div ng-if="trail.open">
+          <h3>Open</h3>
+        </div>
+        <div ng-if="!trail.open">
+          <h3>Closed</h3>
+        </div>
+      </div>
+      <div class="col">
+        <div ng-if="trail.bikes">
+          <h3>Bikes OK</h3>
+        </div>
+        <div ng-if="!trail.bikes">
+          <h3>No Bikes</h3>
+        </div>
+      </div> -->
+    </div>
+
+
+    <p>{{trail.description}}</p>
+  </ion-content>
+</ion-view>

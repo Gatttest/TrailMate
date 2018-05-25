@@ -1,0 +1,35 @@
+<ion-view title="{{poi.name}}">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+     <button ng-click="goPrevious()" class="button-icon button-white back-button icon ion-ios7-arrow-back">
+        
+      </button>
+      <ion-nav-buttons side="right">
+          <button class="button-icon icon button-white ion-pinpoint" ng-click="goToPoi(poi)"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="has-header" padding="true">
+  <div class="row">
+    <div class="col">
+    <img ng-if="poi.image" class="poi" src="img/poi/{{poi.image}}"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>{{poi.description.title}}</h3>
+
+      <p>{{poi.description.about}}</p>
+      <h5>Available Facilities at {{poi.name}}</h5>
+      <ion-list>
+      <ion-item ng-repeat="facility in poi.description.facilities "  type="item-text-wrap">
+      <div class="trail-list-name">
+        <i  class="icon {{facility.icon}}"></i>
+        {{facility.name}}
+      </div>
+      </ion-item>
+    </ion-list>
+
+    
+    </div>
+  </div>
+  </ion-content>
+</ion-view>

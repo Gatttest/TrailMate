@@ -1,0 +1,267 @@
+<ion-view title="Info">
+<ion-nav-bar class="bar-assertive nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+            Back
+        </ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-content class="has-header padding">
+    <div class="list card">
+
+  <a ng-click="emergencyCard = !emergencyCard" ng-class="{active: emergencyCard}" class="item item-icon-left">
+    <i class="icon ion-alert-circled"></i>
+    Emergency Information
+  </a>
+  <div class="item item-text-wrap" ng-show="emergencyCard">
+  <center>
+  <!-- <h2>Emergency Number:</h2> -->
+  
+
+
+  <!-- <h1>+91 8691986879  <br/>+91 8689867625 <br/> +91 8291751403</h1> -->
+  </center>
+   
+<div class="card" ng-repeat="contact in contacts">
+  <div class="item item-divider">
+   <span ng-show="contact.checkpointId >=1 && contact.checkpointId<10">Check Point {{contact.checkpointId}}</span>
+   <span ng-show="contact.checkpointId=='0'">Start Point</span>
+   <span ng-show="contact.checkpointId == '10'">Finish Point</span>
+
+  </div>
+  <div class="item item-text-wrap">
+   <p>
+   <span ng-show="contact.cname1!= '' && contact.phone1 != ''"><strong>{{contact.cname1}} : <a href="tel:{{contact.phone1}}">{{contact.phone1}}</a></strong></span><br/>
+   <span ng-show="contact.cname2 != '' && contact.phone2 != ''"><strong>{{contact.cname2}} : <a href="tel:{{contact.phone2}}">{{contact.phone2}}</a></strong></span>
+</p>
+  </div>
+  
+</div>
+
+
+
+    <p>
+    <!-- <ul>
+        <li>ECC: <br/><strong>+91-8459366551</strong></li>
+        <li> Ambulance: <br/><strong>+91-8459366551</strong></li>
+    </ul> -->
+    </p>
+   <!--  <p>Don't hike or ride alone unless you know what you're doing and always ride within your ability.</p>
+    <p>Always bring food, water and if mountain biking, tools. It can get very HOT in the hills around !</p>
+    <p>If you find yourself in trouble in upper campus, your closest bailout will either be Empire Road if you're closer to the top of the trails, or highway 9 if you're closer to the bottom.</p> -->
+  </div>
+<!-- 
+    <a ng-click="helpCard = !helpCard" ng-class="{active: helpCard}" class="item item-icon-left">
+    <i class="icon ion-help-buoy"></i>
+    How to use this map
+    </a>
+    <div class="item item-text-wrap" ng-show="helpCard">
+        <div class="row">
+            <span class="col">
+                <span class="key green">---</span>
+                <div class="rating easy" style="width: 20px; height: 20px;"></div>
+            </span>
+            <span class="col">
+                Easy, mostly flat terrain.
+            </span>
+        </div>
+        <div class="row">
+            <span class="col">
+                <span class="key blue">---</span>
+                <div class="rating moderate" style="width: 20px; height: 20px;"></div>
+            </span>
+            <span class="col">
+                Moderate terrain. Most likely narrow and could require walking or riding over rocks and rubble.
+            </span>
+        </div>
+        <div class="row">
+            <span class="col">
+                <span class="key">---</span>
+                <div class="rating difficult" style="width: 20px; height: 20px;"></div>
+            </span>
+            <span class="col">
+                Advanced terrain. Makes for difficult hiking or riding. Expect steep loose parts of trail.
+            </span>
+        </div>
+        <div class="row">
+            <span class="col"><i class="icon icon-large ion-pinpoint"></i></span>
+            <span class="col">
+                Mark your location on the map. This button accesses your phone's GPS receiver to get a location. Keep in mind
+                GPS reception is not always perfect, especially in areas with tree cover or lots of relief.
+            </span>
+        </div>
+        <div class="row">
+            <span class="col"><i class="icon icon-large ion-eye-disabled" ng-click="showSecret=true" ng-init="showSecret=false"></i></span>
+            <span class="col">
+                Hide/show trail markers, making it easier to view tracks.
+                <input ng-show="showSecret" placeholder="enter super secret password" ng-model="password" ng-change="checkpass(password)">{{msg}}
+            </span>
+
+        </div>
+
+    </div> -->
+
+   <!--  <a ng-click="floraCard = !floraCard" ng-class="{active: floraCard}" class="item item-icon-left">
+        <i class="icon ion-bug"></i>
+        Flora and fauna
+    </a> -->
+   <!--  <div class="item item-text-wrap" ng-show="floraCard">
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/po.jpg" alt="poison oak">
+                <h2>Poison Oak (Toxicodendron diversilobum) </h2>
+                <p>
+                    Poison oak is an abundant plant in and around  that can cause a nasty rash if tocuhed.
+                    Some people are immune, but if you are unsure, don't risk it! The rash usually takes 2-5 days to develop.
+                    Even if you are immune, avoiding contact will prevent the oil from residing on yourself and your equipment,
+                    thereby decreasing the risk of exposing your buddies! Everyone eventually becomes allergic after repeated
+                    exposure.
+                </p>
+                <p>
+                    Poison oak is not hard to identify once you get used to it, but there are many plants that look similar.
+                    Look for shrubby or vine like plants with 3 green, oily leaves. The edges are slightly wavy. During the fall, the leaves take on a
+                    characteristic orange to red color. In the winter the plant loses all its leaves, but the stalks remain.
+                    <strong>The stalks still have oil on them!</strong> In a way winter is the worst time for poison oak because
+                    it is so hard to see yet it is still able to posin you.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/slug.jpg" alt="slug">
+                <h2>Banana slug (Ariolimax californicus)</h2>
+                <p>There is no inhabitant of  less celebrated than the banana slug. Local children learn to kiss them in outdoor school.
+                They are the mascot for the local university. There are even slug racing contests held annually.</p>
+                <p>The slugs must know this, because they are not shy in either their numbers or visibility. If you see something bright and yellow
+                on the trail, it's a banana slug!</p>
+                <p>The banana slug is the second largest terrestrial slug in the world (second only to Limax cinereoniger) and can grow up to 10 inches long.
+                They are covered with a layer of slime that serves to protect them from dehydration as well as leaving a trail of pheromones to attract potential
+                mates. It also makes your mouth go numb if you french kiss them too enthusiastically!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/redwood.jpg" alt="redwood">
+                <h2>Redwood Trees (Sequoia sempervirens)</h2>
+                <p>
+                    The coastal redwood is the iconic tree of the  mountains. This amazing tree is one of the tallest on earth.
+                    Unfortunatly, most of the old-growth redwoods surrounding  have been logged so very few of the truly old and
+                    large trees remain. Keep your eyes out while riding: the huge stumps you come across (up to 25 feet in diameter!) are
+                    the remains of these giants.
+                </p>
+                <p>
+                    This tree's evergreen leaves are what gives  trails their characterstic "loam". Their naturally splitting deadfall
+                    also makes for amazing building material.  county owes a lot to these trees, so give one a hug sometime - if you can fit your arms
+                    around it.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/coyote.jpg" alt="coyote">
+                <h2>Coyote (Canis latrans)</h2>
+                <p>
+                    Coyotes are common in the hills above . They are gaining a reputation for being extremely bold and fearless,
+                    especially in reserves such as Pogonip and UC . You may be able to get surprisingly close to these animals, but that
+                    doesn't mean you should. Recent encounters with coyotes in UC  have sparked fears that they may become at a
+                    danger to pets and small children.
+                </p>
+                <p>
+                    The best thing you can do for these beautiful animals is to ignore them or observe them from a safe distance. The less they become
+                    accustomed to humans the less likely harmful action will have to be taken against them.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/cougar.jpg" alt="cougar">
+                <h2>Cougar (Puma concolor)</h2>
+                <p>
+                    The cougar (also known as a puma, mountain lion or panther) is often spoken of but rarely observed. They are a reclusive animal
+                    with fairly wide, non overlapping territories. While attacks on humans are known, they are very rare and largely exaggerated.
+                    As of this writing, santacruzpumas.org shows 5 cougers currently being tracked within the areas of Wilder Ranch, UCSC upper campus, and Henry Cowell Sate Park.
+                </p>
+                <p>
+                    Cougars won't allow themselves to be seen by humans if they can help it. If you do happen to come upon one, make yourself large and loud.
+                    Holding equipment above your head is a sure way to appear ferocious while at the same time having something to throw if necessary.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/hawk.jpg" alt="Red-tailed Hawk">
+                <h2>Red-tailed Hawk (Buteo jamaicensis)</h2>
+                <p>
+                    The red-tail is a common and well known bird of prey in North America. Look for them on top of fence posts, telephone lines or flying overhead
+                    above open areas. The hawk's diet consists mainly of rodents and reptiles plucked off the ground from the air or a perch. Because of
+                    the bird's hunting habits, they are more likely observed in open areas such as the grassland fields of Wilder Ranch as opposed to heavily
+                    wooded areas like the redwoods.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/rattlesnake.jpg" alt="Rattlesnake">
+                <h2>Western Rattlesnake (Crotalus oreganus)</h2>
+                <p>
+                    The rattlesnake is the most feared reptile in the west. Their bite is highly venomous and can lead to death if not treated.
+                    Rattlesnakes can usually be found amoungst rocks where they take advantage of the shelter, prey and ability to bask in the sun.
+                    When threatened the rattlesnake makes the telltale sound of it's namesake - the rattle.
+                </p>
+                <p>
+                    Rattlesnake bites can be avoided by simply being aware of your surroundings and having common sense.
+                    Don't go sticking fingers or toes behind rocks without looking first and
+                    if you hear a rattle be sure to stop, identify the location of the snake, and slowly back away.
+                </p>
+                <p>
+                    The pacific gopher snake is a common, harmless snake that looks very much like a rattlesnake. They cause many false identifications
+                    and more than a few scares out on the trail and for good reason: the rattler is best avoided.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img class="ff" src="img/fnf/beetle.jpg" alt="Ohlone Tiget Beetle">
+                <h2>Ohlone tiger beetle (Cicindela ohlone)</h2>
+                <p>
+                    The Ohlone tiger beetle is a species of beetle endemic to  County (meaning it lives nowhere else) discovered in 1987.
+                    Widespread development and native habitat loss has made this species critically imperiled, causing it to be placed on the endangered species list in 2001.
+                    The beetle requires open patches of clay in native california grassland with little vegetation in order to breed and forage.
+                    In other words, it needs trails in Wilder Ranch and UCSC upper campus.
+                </p>
+                <p>
+                    This fact means trail users in Wilder Ranch and UCSC upper campus have a special relationship with the Ohlone tiger beetle. The beetle
+                    would not survive if it were not for the trails created by hikers, mountain bikers and equestrians. At the same time, traffic on these trails
+                    during breeding season is dangerous to them for obvious reasons.
+                </p>
+                <p>
+                    During breeding season biologists will often fence off and reroute trails in Wilder Ranch or UCSC upper campus. This is to create a safe
+                    habitat for reproduction and usually signage will be erected explaining as much. <strong>Please respect these closures and ride around!</strong>.
+                    Crushing a critically endangered beetle underneath your boot or tire is guaranteed to add two pounds of weight (in guilt) to your equipment, and may cause
+                    catostrophic mechanical failure.
+                </p>
+            </div>
+        </div>
+    </div> -->
+    <a ng-click="aboutCard = !aboutCard" ng-class="{active: aboutCard}" class="item item-icon-left">
+        <i class="icon ion-heart"></i>
+        About
+    </a>
+    <div class="item item-text-wrap" ng-show="aboutCard" id="aboutCard">
+        <div class="row">
+            <div class="col">
+                <p>Tackle 100km/50km of Indian terrain within 48 hours/24 hours as a team of four in an experience of a lifetime and make a difference by raising funds in our fight against inequality.</p>
+            <center>
+               
+                <img src="img/icon/oxfam.png">
+               
+
+               
+            </div>
+        </div>
+    </div>
+
+  <a class="item item-icon-left" ui-sref="tab.extras-tos">
+    <i class="icon ion-android-note"></i>
+    Terms of Service
+  </a>
+</div>
+  </ion-content>
+</ion-view>

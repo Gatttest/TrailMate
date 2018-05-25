@@ -1,0 +1,9 @@
+.dist-marker {
+	font-size: 12px;
+	border: 1px solid #777;
+	border-radius: 15px;
+	text-align: center;
+	padding-top:6px;
+	color: #000;
+	background: #fff;
+}
